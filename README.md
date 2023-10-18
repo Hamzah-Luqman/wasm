@@ -1,20 +1,18 @@
 # WASM dataset
-The data and code will be available soon.
 
-# Overview
-
-This repository contains the code and dataset (will be released soon) for the research paper "WASM: A Dataset for Hashtag Recommendation for Arabic Tweets". In this paper, we introduce a benchmark for Arabic tweets Hashtags recommendation. We also presented three baseline models to approach this task from classification and generation aspects.
+This repository contains the code and dataset (will be released soon) for the research paper "WASM: A Dataset for Hashtag Recommendation for Arabic Tweets". In this paper, we introduced a benchmark for Arabic tweet hashtag recommendations. The proposed dataset is subjected to several rounds of automatic and manual filtrations to ensure that it is suitable for tasks related to tweets and hashtags. We also presented three baseline models to approach this task from classification and generation aspects.
 
 ![Word Cloud](figures/words_cloud.png)
 
 Dataset Statistics
 
-| Number of Collected tweets        | 2717000 |
+| Number of Collected tweets        | 2,717,000 |
 | --------------------------------- | ------- |
-| Number of Tweets after filtration | 101099  |
+| Number of Tweets after filtration | 101,099  |
 | Number of hashtags                | 87      |
-| Number of words                   | 1637022 |
-| Number of unique words            | 111402  |
+| Number of words                   | 1,637,022 |
+| Number of unique words            | 111,402  |
+
 
 Top hashtags in terms of the number of tweets:
 
@@ -23,11 +21,11 @@ Top hashtags in terms of the number of tweets:
 
 # Baselines
 
-We introduced the following baselines:
+We introduced the following baseline models:
 
 ## Classification-based baselines
 
-We propose a hashtag recommendation system by considering this task as a classification problem. We used a BERT-based classification model trained on Arabic tweets obtained using AraBERT as an embedding layer. AraBERT is a project to create Arabic BERT-based pretrained models with various setups. We experimented with two pretrained BERT models employing two preprocessing schemes. The pretrained models explored was with normal Arabic text and with Farasa-based tokenization text. The preprocessing schemes experimented was to just feed the tweet as is or challenge it more by masking its Hashtags.
+We proposed a hashtag recommendation system by considering this task as a classification problem. We used a BERT-based classification model trained on Arabic tweets obtained using AraBERT as an embedding layer. AraBERT is a project to create Arabic BERT-based pretrained models with various setups. We experimented with two pretrained BERT models employing two preprocessing schemes. The pretrained models explored with normal Arabic text and with Farasa-based tokenization text. The preprocessing schemes were experimented to just feed the tweet as is or challenge it more by masking its Hashtags.
 
 
 ## Generation-based baselines
