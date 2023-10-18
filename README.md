@@ -4,7 +4,7 @@ This repository contains the code and dataset (will be released soon) for the re
 
 ![Word Cloud](figures/words_cloud.png)
 
-Dataset Statistics
+# Dataset Statistics
 
 | Number of Collected tweets        | 2,717,000 |
 | --------------------------------- | ------- |
