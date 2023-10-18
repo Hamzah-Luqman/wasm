@@ -1,6 +1,6 @@
 # WASM dataset
 
-This repository contains the code and dataset (will be released soon) for the research paper "_WASM: A Dataset for Hashtag Recommendation for Arabic Tweets_". In this paper, we introduced a benchmark for Arabic tweet hashtag recommendations. The proposed dataset is subjected to several rounds of automatic and manual filtrations to ensure that it is suitable for tasks related to tweets and hashtags. We also presented three baseline models to approach this task from classification and generation aspects.
+This repository contains the code and dataset (will be released soon) for the research paper "_WASM: A Dataset for Hashtag Recommendation for Arabic Tweets_". In this paper, we introduced a benchmarked dataset for Arabic tweet hashtag recommendations. In addition, the dataset can be used for several tasks related to tweets and hashtags, such as filtering tweets of each hashtag. The proposed dataset was subject to several rounds of automatic and manual filtrations to ensure that it is suitable for tasks related to tweets and hashtags. We also presented three baseline models to approach this task from classification and generation aspects.
 
 ![Word Cloud](figures/words_cloud.png)
 
