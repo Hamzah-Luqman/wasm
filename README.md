@@ -55,3 +55,33 @@ Hashtag recommendation can also be considered as a text generation problem, wher
 
 During the data-collection stage, we noted that numerous tweets contain entities that are also available in the tweet text. To find the types of entities, we manually clustered hashtags based on the types of entities within the hashtag. This clustering resulted in labeling 6 hashtags as location hashtags, 44 as
 organizational hashtags, and 30 as individual hashtags. These three clusters are not mutually exclusive, as a hashtag can appear in more than one cluster. Other hashtags that do not belong to these three main types are excluded.
+
+# Results
+
+The models were trained and evaluated on the WASM dataset, which comprises 101,099 tweets and 87 hashtags. The data was split into 80% for training, 10% for development, and 10% for testing.
+
+## Classification model results
+
+The Classification models were designed to classify tweets into predefined hashtags. The best-performing model was AraBERT-Morph, outperforming AraBERT-Twitter due to the morphological analysis's importance for the Arabic language. However, the performance of hashtag-masking-based models dropped significantly due to the masking process.
+
+| Model                          | Precision (%) | Recall (%) | F1-score (%) | Accuracy (%) |
+|--------------------------------|---------------|------------|--------------|--------------|
+| AraBERT-Twitter                | 74.08         | 76.61      | 75.32        | 93.72        |
+| AraBERT-Morph                  | 73.76         | 77.15      | 75.42        | 94.13        |
+| AraBERT-Twitter Hashtag-masking| 39.62         | 42.19      | 39.88        | 73.90        |
+| AraBERT-Morph Hashtag-masking  | 37.89         | 41.73      | 38.57        | 72.32        |
+
+## Generation model results
+
+Two strategies were used to improve the results: local and global expansion. The local strategy generates additional hashtags nearest to each generated hashtag, while the global strategy generates hashtags nearest to the tweet after the top generated hashtags. The results showed that lower 'k' (the number of generated hashtags) yielded better results for both strategies, with local expansion being the superior strategy overall.
+
+## NER model results
+
+The NER (Named Entity Recognition) system was fed with raw and normalized tweets and hashtags, and the results were reported for location, organization, and individual entities. Location entities performed best regarding partial matches, whereas the NER system was not as effective in predicting organizational and individual entities, indicating room for improvement in these areas.
+
+|                              | Location (%) | Organization (%) | Individuals |
+|------------------------------|--------------|------------------|-------------|
+| Full match                   | 0.00         | 03.06            | 0.52        |
+| Full match with normalization| 0.00         | 03.06            | 0.52        |
+| Partial match                | 96.98        | 64.66            | 28.28       |
+| Partial match with normalization| 97.02   | 64.67            | 28.33       |
