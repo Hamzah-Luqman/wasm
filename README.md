@@ -24,12 +24,12 @@ The filtration steps can be summarized as:
 
 # Dataset Statistics
 
-| Number of Collected tweets        | 2,717,000 |
-| --------------------------------- | ------- |
-| Number of Tweets after filtration | 101,099  |
-| Number of hashtags                | 87      |
+| Number of collected tweets        | 2,717,000 |
+| :-------------------------------- | :-------  |
+| Number of tweets after filtration | 101,099   |
+| Number of hashtags                | 87        |
 | Number of words                   | 1,637,022 |
-| Number of unique words            | 111,402  |
+| Number of unique words            | 111,402   |
 
 
 Top hashtags in terms of the number of tweets:
@@ -48,13 +48,13 @@ We proposed a hashtag recommendation system by considering this task as a classi
 
 ## Generation-based baselines
 
-Hashtag recommendation can also be considered as a text generation problem, where we generate a text (i.e., hashtag in our task) based on the tweet text. Several models have been proposed in the literature for text generation, such as sequence-to-sequence that can be transformer-based like T5 or just LSTM-based. However, few approaches have been proposed for hashtag generation. Inspired by a previous study [https://doi.org/10.1145/3466876], we propose the AraHASHET architecture for hashtag generation.
+Hashtag recommendation can also be considered as a text generation problem, where we generate a text (i.e., hashtag in our task) based on the tweet text. Several models have been proposed in the literature for text generation, such as sequence-to-sequence that can be transformer-based like T5 or just LSTM-based. However, few approaches have been proposed for hashtag generation. Inspired by a previous study[^1], we propose the AraHASHET architecture for hashtag generation.
 
+[^1]: https://doi.org/10.1145/3466876
 
 ### NER-based generation model
 
-During the data-collection stage, we noted that numerous tweets contain entities that are also available in the tweet text. To find the types of entities, we manually clustered hashtags based on the types of entities within the hashtag. This clustering resulted in labeling 6 hashtags as location hashtags, 44 as
-organizational hashtags, and 30 as individual hashtags. These three clusters are not mutually exclusive, as a hashtag can appear in more than one cluster. Other hashtags that do not belong to these three main types are excluded.
+During the data-collection stage, we noted that numerous tweets contain entities that are also available in the tweet text. To find the types of entities, we manually clustered hashtags based on the types of entities within the hashtag. This clustering resulted in labeling 6 hashtags as location hashtags, 44 as organizational hashtags, and 30 as individual hashtags. These three clusters are not mutually exclusive, as a hashtag can appear in more than one cluster. Other hashtags that do not belong to these three main types are excluded.
 
 # Results
 
@@ -79,13 +79,13 @@ Two strategies were used to improve the results: local and global expansion. The
 
 The NER (Named Entity Recognition) system was fed with raw and normalized tweets and hashtags, and the results were reported for location, organization, and individual entities. Location entities performed best regarding partial matches, whereas the NER system was not as effective in predicting organizational and individual entities, indicating room for improvement in these areas.
 
-|                              | Location (%) | Organization (%) | Individuals |
-|------------------------------|--------------|------------------|-------------|
-| Full match                   | 0.00         | 03.06            | 0.52        |
-| Full match with normalization| 0.00         | 03.06            | 0.52        |
-| Partial match                | 96.98        | 64.66            | 28.28       |
-| Partial match with normalization| 97.02   | 64.67            | 28.33       |
+|                                   | Location (%) | Organization (%)  | Individuals (%) |
+|-----------------------------------|---------------|------------------|-----------------|
+| Full match                        | 0.00          | 3.06             | 0.52            |
+| Full match with normalization     | 0.00          | 3.06             | 0.52            |
+| Partial match                     | 96.98         | 64.66            | 28.28           |
+| Partial match with normalization  | 97.02         | 64.67            | 28.33           |
 
 # Final Remarks
 
-This repository encompasses our study focused on Arabic hashtag recommendation and classification for tweets. We assembled a dataset (WASM) with over 101,000 tweets and 87 unique hashtags, which we used to fine-tune four BERT models for hashtag classification and propose the AraHASHET model for hashtag generation. Despite promising results, there are opportunities for improvement. Future research could consider the impact of different Arabic dialects, the applicability of non-Arabic hashtag recommendation techniques, and the inclusion of other modalities like images. Additionally, exploring different tokenization schemes and transformer-based NER models could offer valuable insights and potential enhancements for our models.
+This repository encompasses our study focused on Arabic hashtag recommendation and classification for tweets. We assembled a dataset (WASM) with over 101K tweets and 87 unique hashtags, which we used to fine-tune four BERT models for hashtag classification and propose the AraHASHET model for hashtag generation. Despite promising results, there are opportunities for improvement. Future research could consider the impact of different Arabic dialects, the applicability of non-Arabic hashtag recommendation techniques, and the inclusion of other modalities like images. Additionally, exploring different tokenization schemes and transformer-based NER models could offer valuable insights and potential enhancements for our models.
