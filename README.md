@@ -4,6 +4,10 @@ This repository contains the code and dataset (will be released soon) for the re
 
 ![Word Cloud](figures/words_cloud.png)
 
+# Dataset Collection
+
+Using Twitter's official APIs and Tweepy, we conducted a two-phase data collection process. Initially, we gathered 11K tweets in a pilot experiment, followed by a systematic collection of tweets using top trending hashtags in Saudi Arabia from January 12 to January 20, 2022. The total number of collected tweets was initially 2.7 million with 50K unique hashtags, but this was significantly reduced after data cleaning.
+
 # Dataset Statistics
 
 | Number of Collected tweets        | 2,717,000 |
