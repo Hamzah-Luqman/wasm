@@ -85,3 +85,7 @@ The NER (Named Entity Recognition) system was fed with raw and normalized tweets
 | Full match with normalization| 0.00         | 03.06            | 0.52        |
 | Partial match                | 96.98        | 64.66            | 28.28       |
 | Partial match with normalization| 97.02   | 64.67            | 28.33       |
+
+# Final Remarks
+
+This repository encompasses our study focused on Arabic hashtag recommendation and classification for tweets. We assembled a dataset (WASM) with over 101,000 tweets and 87 unique hashtags, which we used to fine-tune four BERT models for hashtag classification and propose the AraHASHET model for hashtag generation. Despite promising results, there are opportunities for improvement. Future research could consider the impact of different Arabic dialects, the applicability of non-Arabic hashtag recommendation techniques, and the inclusion of other modalities like images. Additionally, exploring different tokenization schemes and transformer-based NER models could offer valuable insights and potential enhancements for our models.
